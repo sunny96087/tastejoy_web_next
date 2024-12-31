@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* color */
+:root {
+  --color-primary-green-1: #ebe5ba;
+  --color-primary-green-2: #bdb890;
+  --color-primary-green-3: #87835d;
+  --color-primary-green-4: #6f6d55;
+  --color-primary-green-5: #494839;
+  --color-secondary-orange-1: #fde5c2;
+  --color-secondary-orange-2: #f8d3af;
+  --color-secondary-orange-3: #f0c091;
+  --color-secondary-orange-4: #edad73;
+  --color-wran-red-1: #ffaeaa;
+  --color-wran-red-2: #ed6f69;
+  --color-background: #fffdf6;
+}
+
+/* 通用樣式 */
+
+/* 圖片自適應的放到最大 */
+.cus-pic-auto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
