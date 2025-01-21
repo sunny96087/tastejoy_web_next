@@ -22,6 +22,9 @@ export default {
         'wran-1': 'var(--color-wran-red-1',
         'wran-2': 'var(--color-wran-red-2',
       },
+      backgroundImage: {
+        'login-register-bg': "url('/images/login-register-bg.jpg')",
+      },
     },
   },
   plugins: [],

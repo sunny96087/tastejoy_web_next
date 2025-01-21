@@ -16,6 +16,9 @@
   --color-wran-red-1: #ffaeaa;
   --color-wran-red-2: #ed6f69;
   --color-background: #fffdf6;
+  .center {
+    @apply flex justify-center items-center;
+  }
 }
 
 /* 通用樣式 */
