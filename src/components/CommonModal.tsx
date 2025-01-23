@@ -18,7 +18,7 @@ export default function CommonModal({ name, message, afterClose }: CommonModalPr
   };
 
   return (
-    <dialog id={name}>
+    <dialog id={name} className=''>
       <p>{defaultMessage}</p>
       {afterClose ? (
         <div><button onClick={closeDialog}>關閉</button></div>

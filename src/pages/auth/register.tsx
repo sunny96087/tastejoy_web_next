@@ -9,7 +9,7 @@ import SocialMediaLogin from '@/components/form/SocialMediaLogin';
 import FormBottomNav from '@/components/form/FormBottomNav';
 import FormSlogan from '@/components/form/FormSlogan.tsx';
 import CommonModal from '@/components/CommonModal';
-import Loading from '@/components/Loading';
+
 
 import './login.scss';
 
@@ -72,9 +72,9 @@ export default function Register() {
       password,
       confirmPassword: password,
     };
-    startLoading();
+    // startLoading();
     const response = await auth.register(params);
-    stopLoading();
+    // stopLoading();
     console.log(response, '12121223');
     setRegisterResponse(response);
     setRegisterMessage(response.message);
@@ -84,13 +84,8 @@ export default function Register() {
     // }
   };
 
-  const loadingRef = useRef(null);
-  const startLoading = () => {
-    loadingRef.current?.show();
-  };
-  const stopLoading = () => {
-    loadingRef.current?.hide();
-  };
+
+
 
   const goHomePage = () => {
     console.log('fuck login');
@@ -102,7 +97,7 @@ export default function Register() {
       <FormBg />
       <FormSlogan type={'register'} />
       <CommonModal name={'registerModal'} message={registerMessage} afterClose={goHomePage} />
-      <Loading ref={loadingRef} />
+
 
       <div className="form-bg register">
         <h2 className="form-title">註冊</h2>
