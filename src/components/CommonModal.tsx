@@ -12,16 +12,18 @@ export default function CommonModal({ name, message, afterClose }: CommonModalPr
   }, [message]);
 
   const closeDialog = () => {
-    const dialog = document.getElementById(name);
+    const dialog = document.getElementById(name) as HTMLDialogElement;
     dialog && dialog.close();
     afterClose && afterClose();
   };
 
   return (
-    <dialog id={name} className=''>
+    <dialog id={name} className="">
       <p>{defaultMessage}</p>
       {afterClose ? (
-        <div><button onClick={closeDialog}>關閉</button></div>
+        <div>
+          <button onClick={closeDialog}>關閉</button>
+        </div>
       ) : (
         <form method="dialog">
           <button>關閉</button>
