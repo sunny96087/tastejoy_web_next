@@ -9,7 +9,7 @@ import Navbar from '../components/Navbar';
 import Loading from '@/components/Loading';
 
 export default function App({ Component, pageProps }: AppProps) {
-  const loadingRef = useRef(null);
+  const loadingRef = useRef<{ show: () => void; hide: () => void }>(null);
   const startLoading = () => {
     loadingRef.current?.show();
   };
